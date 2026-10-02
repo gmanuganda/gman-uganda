@@ -1610,6 +1610,488 @@ html,body{max-width:100%;overflow-x:hidden}
   .hero-orbit-two{width:210px;height:210px;right:28px;top:80px}
 }
 
+
+/* ===== Navigation button treatment ===== */
+.site-nav a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:40px;
+  padding:9px 14px;
+  border:1px solid transparent;
+  border-radius:10px;
+  color:var(--navy);
+  text-decoration:none;
+  font-weight:800;
+  line-height:1.15;
+  transition:background .2s ease,color .2s ease,border-color .2s ease,transform .2s ease,box-shadow .2s ease;
+}
+.site-nav a:hover{
+  background:rgba(17,105,173,.08);
+  border-color:rgba(17,105,173,.16);
+  color:var(--blue);
+  transform:translateY(-1px);
+}
+.site-nav a.active,
+.site-nav a[aria-current="page"]{
+  background:var(--navy);
+  color:#fff;
+  border-color:var(--navy);
+  box-shadow:0 7px 18px rgba(7,26,53,.16);
+}
+@media(max-width:900px){
+  .site-nav a{
+    width:100%;
+    min-height:44px;
+    padding:10px 13px;
+  }
+}
+
+
+/* ===== Real WhatsApp mark ===== */
+.whatsapp-svg{
+  width:27px !important;
+  height:27px !important;
+  display:block !important;
+  flex:0 0 27px;
+}
+.whatsapp-label{
+  position:absolute !important;
+  width:1px !important;
+  height:1px !important;
+  padding:0 !important;
+  margin:-1px !important;
+  overflow:hidden !important;
+  clip:rect(0,0,0,0) !important;
+  white-space:nowrap !important;
+  border:0 !important;
+}
+
+
+/* ===== Organized GMaN navigation ===== */
+.site-nav{
+  display:flex !important;
+  align-items:center;
+  justify-content:center;
+  gap:7px;
+  flex-wrap:nowrap;
+  width:100%;
+  margin:0 auto;
+  padding:5px 0;
+}
+.site-nav a{
+  display:inline-flex !important;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  white-space:nowrap;
+  min-height:40px;
+  min-width:max-content;
+  padding:9px 14px !important;
+  border:1px solid transparent;
+  border-radius:10px;
+  line-height:1.15;
+  font-size:.84rem;
+  font-weight:800;
+}
+.site-nav a[href="#project-boychild"],
+.site-nav a[href="#boychild"]{
+  max-width:145px;
+  white-space:normal;
+  line-height:1.1;
+}
+.site-nav a[href="#work"],
+.site-nav a[href="#work-with-us"]{
+  max-width:112px;
+  white-space:normal;
+  line-height:1.1;
+}
+.site-nav a:hover{
+  background:rgba(17,105,173,.08);
+  border-color:rgba(17,105,173,.16);
+  color:var(--blue);
+}
+.site-nav a.active,
+.site-nav a[aria-current="page"]{
+  background:var(--navy);
+  color:#fff;
+  border-color:var(--navy);
+  box-shadow:0 7px 18px rgba(7,26,53,.16);
+}
+@media(max-width:1040px) and (min-width:701px){
+  .site-nav{gap:4px}
+  .site-nav a{padding:8px 9px !important;font-size:.77rem}
+}
+@media(max-width:700px){
+  .site-nav{
+    display:grid !important;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:8px;
+    padding:10px 0;
+  }
+  .site-nav a,
+  .site-nav a[href="#project-boychild"],
+  .site-nav a[href="#boychild"],
+  .site-nav a[href="#work"],
+  .site-nav a[href="#work-with-us"]{
+    width:100%;
+    max-width:none;
+    min-height:44px;
+    padding:10px 9px !important;
+    white-space:normal;
+    font-size:.78rem;
+  }
+}
+
+
+/* =========================================================
+   GMaN — Professional Header & Navigation
+   ========================================================= */
+:root{
+  --header-navy:#061a35;
+  --header-blue:#0b3157;
+  --header-gold:#e5b52f;
+  --header-ink:#172a40;
+}
+
+.site-header,
+header.site-header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:#fff;
+  border-bottom:1px solid rgba(6,26,53,.10);
+  box-shadow:0 7px 24px rgba(6,26,53,.08);
+}
+
+.site-header .topbar{
+  min-height:36px;
+  padding:0;
+  background:linear-gradient(90deg,#061a35,#092846);
+  color:#eef5fa;
+  font-size:.72rem;
+}
+
+.site-header .topbar .container{
+  min-height:36px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.site-header .topbar strong{
+  color:#fff;
+  font-weight:900;
+  letter-spacing:.02em;
+}
+
+.site-header .topbar span{
+  opacity:.92;
+}
+
+.site-header .navbar,
+.site-header .nav-inner,
+.site-header .header-inner{
+  min-height:84px;
+}
+
+.site-header .nav-inner,
+.site-header .header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:28px;
+}
+
+.site-header .brand{
+  display:flex;
+  align-items:center;
+  flex:0 0 auto;
+  min-width:210px;
+}
+
+.site-header .brand img{
+  display:block;
+  width:190px;
+  max-width:190px;
+  height:auto;
+  max-height:62px;
+  object-fit:contain;
+}
+
+.site-nav{
+  flex:1 1 auto;
+  display:flex !important;
+  align-items:center;
+  justify-content:flex-end;
+  gap:4px;
+  min-width:0;
+  margin:0;
+  padding:0;
+}
+
+.site-nav a{
+  position:relative;
+  display:inline-flex !important;
+  align-items:center;
+  justify-content:center;
+  min-height:42px;
+  padding:9px 13px !important;
+  border:1px solid transparent;
+  border-radius:9px;
+  color:var(--header-ink);
+  background:transparent;
+  font-size:.79rem;
+  font-weight:850;
+  line-height:1.15;
+  letter-spacing:-.005em;
+  text-decoration:none;
+  white-space:nowrap;
+  transition:all .2s ease;
+}
+
+.site-nav a::after{
+  content:"";
+  position:absolute;
+  left:13px;
+  right:13px;
+  bottom:5px;
+  height:2px;
+  border-radius:10px;
+  background:var(--header-gold);
+  transform:scaleX(0);
+  transform-origin:center;
+  transition:transform .2s ease;
+}
+
+.site-nav a:hover{
+  color:var(--header-blue);
+  background:#f5f8fb;
+  border-color:#e2e9ef;
+  transform:none;
+  box-shadow:none;
+}
+
+.site-nav a:hover::after{
+  transform:scaleX(1);
+}
+
+.site-nav a.active,
+.site-nav a[aria-current="page"]{
+  color:var(--header-navy);
+  background:#f7f9fb;
+  border-color:#dfe7ee;
+  box-shadow:none;
+}
+
+.site-nav a.active::after,
+.site-nav a[aria-current="page"]::after{
+  transform:scaleX(1);
+}
+
+/* Give the two naturally longer labels enough room without making the
+   whole navigation look uneven. */
+.site-nav a[href*="project"],
+.site-nav a[href*="boychild"]{
+  max-width:132px;
+  white-space:normal;
+  text-align:left;
+}
+
+.site-nav a[href*="work"]{
+  max-width:100px;
+  white-space:normal;
+  text-align:center;
+}
+
+/* Donation is a true action, visually distinct from navigation. */
+.site-nav a[href*="donate"],
+.site-nav .donate,
+.site-nav a.donate{
+  margin-left:8px;
+  padding:11px 20px !important;
+  min-height:46px;
+  border-radius:999px;
+  color:#0a2039;
+  background:linear-gradient(180deg,#f5cc5b,#e7b532);
+  border:1px solid #e2b235;
+  box-shadow:0 8px 18px rgba(229,181,47,.22);
+  font-weight:950;
+}
+
+.site-nav a[href*="donate"]::after,
+.site-nav .donate::after,
+.site-nav a.donate::after{
+  display:none;
+}
+
+.site-nav a[href*="donate"]:hover,
+.site-nav .donate:hover,
+.site-nav a.donate:hover{
+  color:#061a35;
+  background:linear-gradient(180deg,#f8d66e,#e8b735);
+  border-color:#dcae29;
+  transform:translateY(-1px);
+  box-shadow:0 11px 23px rgba(229,181,47,.30);
+}
+
+/* Desktop: keep everything visually centered and prevent the header from
+   becoming cramped on medium laptop screens. */
+@media (max-width:1120px) and (min-width:901px){
+  .site-header .nav-inner,
+  .site-header .header-inner{
+    gap:16px;
+  }
+  .site-header .brand{
+    min-width:180px;
+  }
+  .site-header .brand img{
+    width:165px;
+    max-width:165px;
+  }
+  .site-nav{
+    gap:2px;
+  }
+  .site-nav a{
+    padding:8px 9px !important;
+    font-size:.73rem;
+  }
+  .site-nav a[href*="donate"],
+  .site-nav .donate,
+  .site-nav a.donate{
+    margin-left:4px;
+    padding:10px 15px !important;
+  }
+}
+
+/* Mobile / tablet header */
+@media (max-width:900px){
+  .site-header .topbar{
+    display:none;
+  }
+  .site-header .nav-inner,
+  .site-header .header-inner{
+    min-height:70px;
+    gap:12px;
+  }
+  .site-header .brand{
+    min-width:0;
+  }
+  .site-header .brand img{
+    width:150px;
+    max-width:150px;
+    max-height:52px;
+  }
+  .site-nav{
+    display:grid !important;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:7px;
+    padding:8px 0 12px;
+    justify-content:stretch;
+  }
+  .site-nav a{
+    width:100%;
+    min-height:42px;
+    padding:9px 8px !important;
+    white-space:normal;
+    text-align:center !important;
+    font-size:.73rem;
+  }
+  .site-nav a::after{
+    display:none;
+  }
+  .site-nav a[href*="donate"],
+  .site-nav .donate,
+  .site-nav a.donate{
+    margin-left:0;
+    min-height:44px;
+  }
+}
+
+@media (max-width:520px){
+  .site-header .brand img{
+    width:132px;
+    max-width:132px;
+  }
+  .site-nav{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
+
+
+/* ===== Blue navigation buttons to match Donate ===== */
+.site-nav a{
+  color:#fff !important;
+  background:linear-gradient(180deg,#174f86,#0b3157) !important;
+  border:1px solid #0a2d50 !important;
+  border-radius:999px !important;
+  box-shadow:0 7px 17px rgba(6,26,53,.18) !important;
+  padding:11px 17px !important;
+  min-height:44px;
+  font-weight:900;
+  transform:none !important;
+}
+.site-nav a::after{
+  display:none !important;
+}
+.site-nav a:hover{
+  color:#fff !important;
+  background:linear-gradient(180deg,#21649f,#10406f) !important;
+  border-color:#0b3157 !important;
+  box-shadow:0 10px 22px rgba(6,26,53,.24) !important;
+  transform:translateY(-1px) !important;
+}
+.site-nav a.active,
+.site-nav a[aria-current="page"]{
+  color:#fff !important;
+  background:linear-gradient(180deg,#21649f,#0b3157) !important;
+  border-color:#0b3157 !important;
+  box-shadow:0 10px 22px rgba(6,26,53,.25) !important;
+}
+.site-nav a[href*="donate"],
+.site-nav .donate,
+.site-nav a.donate{
+  color:#0a2039 !important;
+  background:linear-gradient(180deg,#f5cc5b,#e7b532) !important;
+  border-color:#e2b235 !important;
+  box-shadow:0 8px 18px rgba(229,181,47,.22) !important;
+}
+.site-nav a[href*="donate"]:hover,
+.site-nav .donate:hover,
+.site-nav a.donate:hover{
+  color:#061a35 !important;
+  background:linear-gradient(180deg,#f8d66e,#e8b735) !important;
+}
+@media(max-width:1120px) and (min-width:901px){
+  .site-nav a{
+    padding:10px 12px !important;
+    font-size:.72rem;
+  }
+}
+@media(max-width:900px){
+  .site-nav a{
+    min-height:44px;
+    padding:10px 9px !important;
+  }
+}
+
+
+/* ===== Simplified professional header ===== */
+.site-nav{
+  gap:7px;
+}
+.site-nav a{
+  padding-left:18px !important;
+  padding-right:18px !important;
+}
+@media(max-width:1120px) and (min-width:901px){
+  .site-nav a{
+    padding-left:13px !important;
+    padding-right:13px !important;
+  }
+}
+
 </style>
 
 <meta property="og:type" content="website">
@@ -1621,6 +2103,135 @@ html,body{max-width:100%;overflow-x:hidden}
 <meta name="twitter:description" content="GMaN — God's Manifestation among Nations.">
 <meta name="twitter:image" content="gman-social-preview.png">
 <link rel="icon" type="image/png" href="gman-favicon.png">
+
+
+<style>
+/* Header navigation: blue pill buttons */
+.nav-links a{
+  color:#fff !important;
+  background:#1f5f95 !important;
+  border:0 !important;
+  border-radius:999px !important;
+  box-shadow:0 7px 18px rgba(12,45,78,.18) !important;
+  padding:11px 18px !important;
+  min-height:44px !important;
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  gap:8px !important;
+  line-height:1 !important;
+  font-weight:900 !important;
+  transition:background .2s ease, box-shadow .2s ease, transform .2s ease !important;
+}
+.nav-links a:hover{
+  color:#fff !important;
+  background:#174f86 !important;
+  box-shadow:0 9px 20px rgba(12,45,78,.24) !important;
+  transform:translateY(-1px) !important;
+}
+.nav-links .nav-icon{
+  width:20px;
+  height:20px;
+  display:inline-grid;
+  place-items:center;
+  flex:0 0 20px;
+  border-radius:50%;
+  background:rgba(255,255,255,.16);
+  color:#fff;
+  font-size:.78rem;
+  line-height:1;
+}
+@media(max-width:980px){
+  .nav-links a{
+    justify-content:center;
+    min-height:44px;
+    padding:11px 14px !important;
+  }
+}
+</style>
+
+
+<style>
+/* ===== Refined professional header navigation ===== */
+.nav-links{
+  gap:6px !important;
+  align-items:center !important;
+}
+.nav-links a{
+  position:relative;
+  color:#173a5e !important;
+  background:transparent !important;
+  border:1px solid transparent !important;
+  border-radius:8px !important;
+  box-shadow:none !important;
+  padding:9px 13px !important;
+  min-height:40px !important;
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  gap:8px !important;
+  line-height:1 !important;
+  font-size:.84rem !important;
+  font-weight:800 !important;
+  letter-spacing:.01em !important;
+  transition:color .18s ease, background .18s ease, border-color .18s ease !important;
+  transform:none !important;
+}
+.nav-links a::after{
+  content:"";
+  position:absolute;
+  left:13px;
+  right:13px;
+  bottom:5px;
+  height:2px;
+  border-radius:2px;
+  background:#1f6ea8;
+  transform:scaleX(0);
+  transform-origin:center;
+  transition:transform .18s ease;
+}
+.nav-links a:hover{
+  color:#0b568d !important;
+  background:#f1f6fa !important;
+  border-color:#d7e3ec !important;
+  box-shadow:none !important;
+  transform:none !important;
+}
+.nav-links a:hover::after{
+  transform:scaleX(1);
+}
+.nav-links .nav-icon{
+  width:18px;
+  height:18px;
+  display:inline-grid;
+  place-items:center;
+  flex:0 0 18px;
+  border-radius:4px;
+  background:#e8f1f7;
+  color:#155f91;
+  font-size:.68rem;
+  line-height:1;
+}
+.nav-links a:hover .nav-icon{
+  background:#dcebf5;
+  color:#0b568d;
+}
+@media(max-width:980px){
+  .nav-links{
+    gap:4px !important;
+    padding:10px !important;
+  }
+  .nav-links a{
+    justify-content:flex-start;
+    min-height:44px;
+    padding:12px 14px !important;
+    border-radius:8px !important;
+  }
+  .nav-links a::after{
+    display:none;
+  }
+}
+</style>
 
 </head>
 
@@ -1640,14 +2251,11 @@ html,body{max-width:100%;overflow-x:hidden}
     </a>
 
     <nav class="nav-links" id="navLinks" aria-label="Main navigation">
-      <a href="#about">About</a>
-      <a href="#expertise">Expertise</a>
-      <a href="#boychild">PROJECT BOYCHILD</a>
-      <a href="#partners">Partners</a>
-      <a href="#safeguarding">Safeguarding</a>
-      <a href="#work-with-us">Work With Us</a>
-      <a href="#updates">Updates</a>
-      <a href="#contact">Contact</a>
+      <a href="#about"><span class="nav-icon" aria-hidden="true">⌂</span><span>About</span></a>
+      <a href="#expertise"><span class="nav-icon" aria-hidden="true">✦</span><span>Expertise</span></a>
+      <a href="#boychild"><span class="nav-icon" aria-hidden="true">♥</span><span>PROJECT BOYCHILD</span></a>
+      <a href="#partners"><span class="nav-icon" aria-hidden="true">◎</span><span>Partners</span></a>
+      <a href="#contact"><span class="nav-icon" aria-hidden="true">✉</span><span>Contact</span></a>
     </nav>
 
     <div class="nav-actions">
@@ -1673,9 +2281,10 @@ html,body{max-width:100%;overflow-x:hidden}
       <div class="hero-actions">
         <a class="btn btn-primary" href="#boychild">Explore PROJECT BOYCHILD →</a>
         <a class="btn btn-light" href="#partners">Who we partner with</a>
-        <button class="btn btn-whatsapp" type="button" data-whatsapp>
-          <span aria-hidden="true">◉</span> WhatsApp GMaN
-        </button>
+        <button class="btn btn-whatsapp" type="button" data-whatsapp><svg class="whatsapp-svg" viewBox="0 0 32 32" aria-hidden="true">
+  <circle cx="16" cy="16" r="15" fill="#fff"/>
+  <path fill="#25D366" d="M16 6.2a9.8 9.8 0 0 0-8.45 14.77L6.2 25.8l4.97-1.3A9.8 9.8 0 1 0 16 6.2Zm0 17.86a8.05 8.05 0 0 1-4.1-1.12l-.3-.18-2.95.77.79-2.87-.2-.3A8.05 8.05 0 1 1 16 24.06Zm4.42-5.94c-.24-.12-1.43-.7-1.65-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.01-.37-1.92-1.18-.71-.63-1.19-1.4-1.33-1.64-.14-.24-.01-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.31-.74-1.8-.2-.47-.4-.41-.54-.42h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2.01s.86 2.34.98 2.5c.12.16 1.69 2.58 4.1 3.62.57.25 1.02.4 1.37.51.58.18 1.11.15 1.53.09.47-.07 1.43-.58 1.63-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28Z"/>
+</svg><span class="whatsapp-label">WhatsApp</span></button>
       </div>
 
       <div class="hero-note">
@@ -1700,7 +2309,7 @@ html,body{max-width:100%;overflow-x:hidden}
 
         <div class="showcase-message">
           <span class="showcase-kicker">A people-centred approach</span>
-          <h3>Protecting lives.<br><em>Strengthening communities.</em></h3>
+          <h3>Protecting lives.</h3>
           <p>Professional social work and justice-focused action, grounded in dignity and care.</p>
         </div>
 
